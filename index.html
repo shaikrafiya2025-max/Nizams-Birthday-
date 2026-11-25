@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080706">
+<title>Happy Birthday, Nizam</title>
+<style>
+:root{--gold:#e7c77f;--gold2:#9d7131;--cream:#fff1d4;--muted:#c7b99d;--ink:#080706}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 50% -10%,#50391d 0%,#171109 32%,#080706 70%);color:var(--cream);font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+#sky{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.star{position:absolute;color:var(--gold);opacity:.35;animation:twinkle 3s ease-in-out infinite alternate}
+@keyframes twinkle{to{opacity:1;transform:scale(1.6)}}
+section,footer{position:relative;z-index:1}
+section{max-width:940px;margin:auto;padding:88px 20px;text-align:center}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding-top:45px}
+.eyebrow{font:10px Arial,sans-serif;letter-spacing:5px;text-transform:uppercase;color:var(--gold)}
+h1{font-weight:normal;font-size:clamp(58px,14vw,112px);line-height:.95;letter-spacing:2px;margin:28px 0 12px;color:#fff0c9;text-shadow:0 0 30px #e7c77f55,0 0 80px #e7c77f22}
+h2{font-weight:normal;font-size:clamp(31px,7vw,51px);color:var(--gold);margin:15px 0}
+.name-sub{font-size:clamp(17px,4vw,24px);font-style:italic;color:#e4d0a5;letter-spacing:2px}
+.copy{max-width:650px;margin:24px auto;color:var(--muted);font-size:17px;line-height:1.9}
+.rule{height:1px;width:110px;margin:28px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.btn{display:inline-block;border:1px solid var(--gold);border-radius:40px;padding:14px 24px;margin:8px;background:linear-gradient(120deg,#a77b38,#f1d99d);color:#171108;font-weight:bold;letter-spacing:1px;font-size:13px;cursor:pointer;box-shadow:0 8px 28px #d8b56a22;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 35px #d8b56a44}
+.btn.outline{background:transparent;color:var(--gold);box-shadow:none}
+.scrollhint{font:10px Arial,sans-serif;letter-spacing:3px;color:#9c875e;margin-top:54px}
+.panel{padding:clamp(24px,6vw,48px);border:1px solid #9b783f99;border-radius:23px;background:linear-gradient(145deg,#241b10ed,#0c0a08f5);box-shadow:0 20px 65px #0009}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}
+.tile{border:1px solid #85642f88;border-radius:17px;padding:24px 17px;background:linear-gradient(145deg,#1e180f,#0c0a08);min-height:135px}
+.tile b{display:block;color:var(--gold);font-weight:normal;font-size:19px;margin-bottom:10px}
+.tile span{font-size:14px;line-height:1.7;color:var(--muted)}
+.cakearea{width:230px;height:210px;margin:22px auto 10px;position:relative}
+.plate{position:absolute;bottom:17px;left:9px;width:212px;height:17px;border-radius:50%;background:linear-gradient(#fff0c8,#9a6b2d);box-shadow:0 8px 18px #000}
+.cake{position:absolute;bottom:32px;left:36px;width:158px;height:91px;border-radius:13px 13px 18px 18px;background:linear-gradient(90deg,#79451f,#e5bb70 48%,#865024);box-shadow:inset 0 9px #fff0cf}
+.cake:before{content:"";position:absolute;top:17px;left:0;width:100%;height:13px;background:#fff0d3;border-radius:50%}
+.cake:after{content:"";position:absolute;top:39px;left:0;width:100%;height:7px;background:#f4d99f;opacity:.8}
+.candle{position:absolute;bottom:123px;left:110px;width:10px;height:38px;border-radius:3px;background:repeating-linear-gradient(45deg,#fff0cf 0 5px,#b98a43 5px 9px)}
+.flame{position:absolute;bottom:160px;left:108px;width:14px;height:21px;border-radius:50% 50% 45% 45%;background:radial-gradient(ellipse,#fffbd6 0 15%,#ffbd48 45%,#e56b20 78%,transparent 80%);filter:drop-shadow(0 0 10px #ffb52c);animation:flicker .55s infinite alternate}
+@keyframes flicker{to{transform:rotate(9deg) scale(.82)}}
+.caketext{position:absolute;bottom:62px;width:100%;font-size:15px;font-style:italic;color:#fff0d1}
+.galleryframe{max-width:440px;margin:30px auto 0;padding:12px;border:1px solid var(--gold);border-radius:18px;background:linear-gradient(145deg,#3a2a14,#100d08);box-shadow:0 0 35px #d8b56a20}
+.photo-placeholder{aspect-ratio:4/3;border:1px dashed #b38b4b;border-radius:10px;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px;background:radial-gradient(ellipse,#332516,#100d08);color:var(--gold)}
+.photo-placeholder .camera{font-size:42px;margin-bottom:12px}
+.photo-placeholder span{font:11px Arial,sans-serif;letter-spacing:2px;color:#c6a66a}
+.gallery-caption{font-style:italic;color:var(--muted);margin:15px 0 4px}
+.memories{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:28px}
+.memory{border:1px solid #85642f88;border-radius:16px;padding:22px 12px;background:#17130d;color:var(--muted);font-size:14px;line-height:1.7}
+.memory strong{display:block;color:var(--gold);font-size:28px;margin-bottom:9px}
+.letter{display:none;text-align:left;white-space:pre-line;line-height:2;font-size:16px;color:#f5e8cf;margin-top:24px;animation:fade .8s ease}
+.envelope{width:145px;height:95px;margin:28px auto 15px;position:relative;border-radius:7px;background:linear-gradient(135deg,#ad7c37,#f3dca4);box-shadow:0 12px 30px #0008;cursor:pointer}
+.envelope:before{content:"";position:absolute;inset:0;background:linear-gradient(35deg,transparent 49%,#f6e6bd 50%) left/50% 100% no-repeat,linear-gradient(-35deg,transparent 49%,#e4c17a 50%) right/50% 100% no-repeat}
+.envelope:after{content:"♥";position:absolute;top:31px;left:0;right:0;color:#75481e;font-size:25px}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+footer{text-align:center;padding:35px 15px 55px;color:#927d55;font:10px Arial,sans-serif;letter-spacing:3px}
+#up{position:fixed;right:16px;bottom:18px;z-index:5;display:none;border:1px solid #a17b3d;background:#17130d;color:var(--gold);border-radius:50%;width:43px;height:43px;font-size:18px}
+@media(max-width:560px){section{padding:70px 17px}.grid{gap:10px}.tile{padding:19px 12px;min-height:145px}.memories{grid-template-columns:1fr}.copy{font-size:16px}}
+</style></head>
+<body>
+<div id="sky"></div>
+<section class="hero" id="home">
+ <div class="eyebrow">A celebration made just for you</div>
+ <h1>NIZAM</h1>
+ <div class="name-sub">A day as special as you are</div>
+ <div class="rule"></div>
+ <p class="copy">Some people make life brighter simply by being in it. Today is all about celebrating you, your dreams, your smile and the beautiful person you are.</p>
+ <button class="btn" onclick="go('birthday')">Open your birthday surprise ✦</button>
+ <div class="scrollhint">A LITTLE MAGIC IS WAITING BELOW ↓</div>
+</section>
+
+<section id="birthday">
+ <div class="eyebrow">Chapter one · The celebration</div><h2>Today is YOUR day</h2>
+ <p class="copy">Make a wish, take a deep breath, and let this little moment be all yours. May the year ahead bring more joy than you can count.</p>
+ <div class="panel">
+  <div class="cakearea"><div class="plate"></div><div class="cake"></div><div class="caketext">Made with love</div><div class="candle"></div><div class="flame" id="flame"></div></div>
+  <button class="btn" id="blow" onclick="blowCandle()">Tap to blow out your candle</button>
+  <p class="copy" id="wish">May every wish in your heart find its way to you. ✨</p>
+ </div>
+</section>
+
+<section id="words">
+ <div class="eyebrow">Chapter two · Little reminders</div><h2>Reasons the world is lucky to have you</h2>
+ <p class="copy">A few little wishes for the person we're celebrating today.</p>
+ <div class="grid">
+  <div class="tile"><b>Your smile</b><span>May you always find a reason to smile, even on ordinary days.</span></div>
+  <div class="tile"><b>Your heart</b><span>May all the kindness you give return to you in beautiful ways.</span></div>
+  <div class="tile"><b>Your dreams</b><span>May every goal you work for slowly become your reality.</span></div>
+  <div class="tile"><b>Your journey</b><span>May life surprise you with opportunities you never imagined.</span></div>
+ </div>
+</section>
+
+<section id="photo">
+ <div class="eyebrow">Chapter three · A favourite face</div><h2>A moment worth keeping</h2>
+ <p class="copy">This golden frame is waiting for a favourite picture. We'll add your special photo here when you're able to share it.</p>
+ <div class="galleryframe"><div class="photo-placeholder"><div class="camera">✧</div><span>YOUR SPECIAL PHOTO GOES HERE</span></div><div class="gallery-caption">A picture, a thousand memories.</div></div>
+</section>
+
+<section id="memories">
+ <div class="eyebrow">Chapter four · Here's to more</div><h2>Memories yet to be made</h2>
+ <p class="copy">The best moments are often the simplest ones: unexpected laughter, long conversations, silly jokes and memories that stay long after the day is over.</p>
+ <div class="memories">
+  <div class="memory"><strong>✦</strong>More reasons to laugh until your cheeks hurt.</div>
+  <div class="memory"><strong>♡</strong>More moments that make your heart feel full.</div>
+  <div class="memory"><strong>∞</strong>More adventures, dreams and beautiful tomorrows.</div>
+ </div>
+</section>
+
+<section id="letterSection">
+ <div class="eyebrow">Chapter five · From the heart</div><h2>A letter for you</h2>
+ <p class="copy">Some wishes deserve more than a few lines. Tap the envelope to open yours.</p>
+ <div class="panel">
+  <div class="envelope" onclick="openLetter()" role="button" aria-label="Open birthday letter"></div>
+  <button class="btn" onclick="openLetter()">Open your letter 💌</button>
+  <div class="letter" id="letter">Dear Nizam,
+
+Happy Birthday! ❤️
+
+I hope this new chapter brings you endless happiness, good health, peace, success and countless reasons to smile.
+
+May the days ahead be kind to you. May your hard work turn into achievements, your hopes turn into beautiful realities, and your heart always find reasons to feel grateful.
+
+Never stop dreaming big or believing in yourself. You deserve good things, genuine happiness and memories that make you smile for years.
+
+Today, I hope you feel celebrated, appreciated and truly special. Enjoy every little moment of your day.
+
+Happy Birthday, Nizam. May this be your most beautiful year yet. ❤️
+
+With lots of love,
+Someone wishing you the very best ♡</div>
+ </div>
+</section>
+
+<section id="final">
+ <div class="eyebrow">The final wish</div><h2>To a beautiful year ahead</h2><div class="rule"></div>
+ <p class="copy">May this year be full of peaceful mornings, exciting opportunities, genuine people, unexpected blessings and dreams coming true.</p>
+ <div style="font-size:36px;color:var(--gold);margin:25px">✦ ♥ ✦</div>
+ <h2 style="font-size:clamp(34px,8vw,58px)">Happy Birthday, Nizam.</h2>
+ <p class="name-sub">Keep shining. Your story is still unfolding.</p>
+ <button class="btn outline" onclick="go('home')">Experience the surprise again ↺</button>
+</section>
+<footer>MADE WITH LOVE · JUST FOR NIZAM</footer>
+<button id="up" onclick="go('home')" aria-label="Back to top">↑</button>
+<script>
+const sky=document.getElementById('sky');
+for(let i=0;i<55;i++){const s=document.createElement('span');s.className='star';s.textContent=Math.random()>.5?'✦':'·';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.fontSize=(8+Math.random()*13)+'px';s.style.animationDelay=Math.random()*4+'s';sky.appendChild(s)}
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+function blowCandle(){document.getElementById('flame').style.display='none';document.getElementById('wish').textContent='Wish made! May it find its way to you. ✨';document.getElementById('blow').textContent='Your wish is on its way ♥'}
+function openLetter(){const l=document.getElementById('letter');l.style.display='block';l.scrollIntoView({behavior:'smooth',block:'center'});for(let i=0;i<22;i++){const x=document.createElement('span');x.textContent=i%2?'✦':'♥';x.style.cssText='position:fixed;left:'+Math.random()*100+'vw;top:-20px;color:#e7c77f;z-index:9;pointer-events:none;font-size:18px;animation:fall 3s linear forwards';document.body.appendChild(x);setTimeout(()=>x.remove(),3100)}}
+window.addEventListener('scroll',()=>document.getElementById('up').style.display=scrollY>500?'block':'none');
+</script><style>@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:0}}</style>
+</body></html>
